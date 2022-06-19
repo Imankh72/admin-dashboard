@@ -1,5 +1,11 @@
+import SideMenu from "./components/SideMenu";
+
 const App = () => {
-  return <h1>Admin Dashboard</h1>;
+  return (
+    <>
+      <SideMenu />
+    </>
+  );
 };
 
 export default App;
