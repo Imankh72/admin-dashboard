@@ -1,4 +1,5 @@
 import { Box } from "@mui/material";
+import Header from "./components/Header";
 import SideMenu from "./components/SideMenu";
 
 const App = () => {
@@ -10,6 +11,14 @@ const App = () => {
       }}
     >
       <SideMenu />
+      <Box
+        sx={{
+          width: "100%",
+          paddingLeft: "320px",
+        }}
+      >
+        <Header />
+      </Box>
     </Box>
   );
 };
