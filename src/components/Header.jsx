@@ -1,3 +1,4 @@
+import styled from "@emotion/styled";
 import {
   Chat,
   Notifications,
@@ -6,10 +7,21 @@ import {
 } from "@mui/icons-material";
 import { AppBar, Badge, Grid, IconButton, InputBase } from "@mui/material";
 
+const Navbar = styled(AppBar)(({ theme }) => ({
+  padding: "0.5rem 1rem",
+  background: theme.palette.primary,
+}));
+
+const GroupIcon = styled(Grid)(() => ({
+  "& .icon": {
+    color: "#ccc",
+  },
+}));
+
 const Header = () => {
   return (
-    <AppBar position="static" sx={{ padding: "0.5rem 1rem" }}>
-      <Grid container>
+    <Navbar position="static">
+      <Grid container alignItems="center">
         <Grid item>
           <InputBase
             placeholder="جستجو..."
@@ -24,27 +36,28 @@ const Header = () => {
             sx={{
               background: "#ccc",
               borderRadius: "0.5rem",
+              fontSize: "18px",
             }}
           />
         </Grid>
         <Grid item sm></Grid>
-        <Grid item>
+        <GroupIcon item>
           <IconButton>
             <Badge badgeContent={4} color="error">
-              <Notifications />
+              <Notifications className="icon" />
             </Badge>
           </IconButton>
           <IconButton>
             <Badge badgeContent={3} color="error">
-              <Chat />
+              <Chat className="icon" />
             </Badge>
           </IconButton>
           <IconButton>
-            <PowerSettingsNew />
+            <PowerSettingsNew className="icon" />
           </IconButton>
-        </Grid>
+        </GroupIcon>
       </Grid>
-    </AppBar>
+    </Navbar>
   );
 };
 

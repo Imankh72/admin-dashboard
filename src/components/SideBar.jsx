@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 
-const SideMenu = () => {
+const SideBar = () => {
   return (
     <Box>
       <Box
@@ -8,7 +8,7 @@ const SideMenu = () => {
           display: "flex",
           flexDirection: "column",
           position: "absolute",
-          background: "#1e40af",
+          background: "#1e3a8a",
           right: "0",
           width: "320px",
           height: "100%",
@@ -18,4 +18,4 @@ const SideMenu = () => {
   );
 };
 
-export default SideMenu;
+export default SideBar;

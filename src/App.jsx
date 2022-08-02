@@ -1,19 +1,23 @@
+import { ThemeProvider } from "@emotion/react";
 import { Box, CssBaseline } from "@mui/material";
 import Header from "./components/Header";
-import SideMenu from "./components/SideMenu";
+import SideBar from "./components/SideBar";
+import { theme } from "./components/theme";
 
 const App = () => {
   return (
     <>
-      <Box
-        sx={{
-          maxWidth: "1280px",
-          margin: "0 auto",
-        }}
-      >
-        <Header />
-        <SideMenu />
-      </Box>
+      <ThemeProvider theme={theme}>
+        <Box
+          sx={{
+            maxWidth: "1280px",
+            margin: "0 auto",
+          }}
+        >
+          <Header />
+          <SideBar />
+        </Box>
+      </ThemeProvider>
       <CssBaseline />
     </>
   );
