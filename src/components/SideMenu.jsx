@@ -5,10 +5,13 @@ const SideMenu = () => {
     <Box>
       <Box
         sx={{
-          display: "fixed",
+          display: "flex",
+          flexDirection: "column",
+          position: "absolute",
           background: "#1e40af",
+          right: "0",
           width: "320px",
-          height: "100vh",
+          height: "100%",
         }}
       ></Box>
     </Box>
